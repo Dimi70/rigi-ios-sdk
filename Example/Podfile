@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'Rigi_Example' do
+  pod 'Rigi', :path => '../'
+
+  target 'Rigi_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
