@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Rigi'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of Rigi.'
 
 # This description is used to generate tags and improve search results.
@@ -31,12 +31,16 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Rigi/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Rigi' => ['Rigi/Assets/*.png']
-  # }
 
+  # https://stackoverflow.com/questions/45015978/how-to-specify-a-cocoa-pod-asset-target
+
+#  s.resource_bundles = {
+#    'Rigi' => ['Rigi/Assets/*.xcassets']
+#  }
+
+  s.resource = 'Rigi/Assets/*.xcassets'
+  
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit' #, 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

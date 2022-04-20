@@ -1,0 +1,16 @@
+PODS:
+  - Rigi (1.0.0)
+
+DEPENDENCIES:
+  - Rigi (from `../`)
+
+EXTERNAL SOURCES:
+  Rigi:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Rigi: 409a2dce04597441fba9265a9b8eaf49e6130e0d
+
+PODFILE CHECKSUM: 4bb2a812a2e15537898cc96d7a11c8dfa1b71d04
+
+COCOAPODS: 1.11.3

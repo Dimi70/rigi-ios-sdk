@@ -7,7 +7,5 @@ target 'Rigi_Example' do
 
   target 'Rigi_Tests' do
     inherit! :search_paths
-
-    
   end
 end
