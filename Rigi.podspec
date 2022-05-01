@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.frameworks        = 'UIKit'
 
+#  s.preserve_paths    = ['Rigi/Classes/**/*', 'Rigi/Assets/*', 'Rigi/Bin/*', , 'Rigi/Docs/*']
+  s.preserve_paths    = ['**/*']
   s.source_files      = 'Rigi/Classes/*'
   s.resources         = 'Rigi/Assets/*', 'Rigi/Bin/*', 'Rigi/Docs/*'
-  s.preserve_paths    = ['Rigi/Classes/**/*', 'Rigi/Assets/*', 'Rigi/Bin/*', , 'Rigi/Docs/*']
 end
