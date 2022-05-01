@@ -13,16 +13,9 @@ Pod::Spec.new do |s|
   #s.platform          = :ios, '10.0'
   s.swift_version     = '5.0'
   s.ios.deployment_target = '10.0'
-
-  s.source_files      = 'Rigi/Classes/**/*'
-  s.resources         = 'Rigi/Assets/*', 'Rigi/Bin/*', 'Rigi/Docs/*'
   s.frameworks        = 'UIKit'
 
+  s.source_files      = 'Rigi/Classes/*'
+  s.resources         = 'Rigi/Assets/*', 'Rigi/Bin/*', 'Rigi/Docs/*'
   s.preserve_paths    = ['Rigi/Classes/**/*', 'Rigi/Assets/*', 'Rigi/Bin/*', , 'Rigi/Docs/*']
-
-#  s.resource_bundles = {
-#    'Rigi' => ['Rigi/Assets/*.xcassets']
-#  }
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
