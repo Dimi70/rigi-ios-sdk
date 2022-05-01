@@ -1,46 +1,27 @@
-#
-# Be sure to run `pod lib lint Rigi.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
-  s.name             = 'Rigi'
-  s.version          = '1.0.0'
-  s.summary          = 'A short description of Rigi.'
+  s.name              = 'Rigi'
+  s.version           = '1.0.0'
+  s.summary           = 'Makes Rigi previews for your iOS project.'
+  s.homepage          = 'https://rigi.io'
+  s.author            = { 'Name' => 'dimitri@rigi.io' }
+  s.license           = { :type => 'Copyright', :text => 'Copyright 2022 Rigi.io'}
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.source            = { :git => 'https://github.com/Dimi70/rigi-ios-sdk.git', :tag => s.version.to_s }
+  #s.source           = { :git => 'file:///Users/dimi/Projects/Xcode/Rigi/Rigi-Source' } # for local compiling
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  #s.platform          = :ios, '10.0'
+  s.swift_version     = '5.0'
+  s.ios.deployment_target = '10.0'
 
-  s.homepage         = 'https://github.com/Dimi70/Rigi'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Dimi70' => 'dimi@xs4all.nl' }
-  s.source           = { :git => 'https://github.com/Dimi70/Rigi.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'Rigi/Classes/**/*'
-
-  # https://stackoverflow.com/questions/45015978/how-to-specify-a-cocoa-pod-asset-target
+  s.source_files      = 'Rigi/Classes/**/*'
+  s.resource          = 'Rigi/Assets/*.xcassets'
+  #s.resources         = 'Rigi/Assets/*'
+  s.frameworks        = 'UIKit'
 
 #  s.resource_bundles = {
 #    'Rigi' => ['Rigi/Assets/*.xcassets']
 #  }
-
-  s.resource = 'Rigi/Assets/*.xcassets'
-  
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit' #, 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

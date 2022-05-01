@@ -206,6 +206,7 @@ public class Rigi {
         if settings.enableAutoScanning {
             startAutoScanning()
         }
+        print("Rigi Framework is loaded and started.")
     }
 
     @objc func handleTap() {

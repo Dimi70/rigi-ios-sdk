@@ -212,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = AVW49Y6CJU;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = AVW49Y6CJU;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -479,6 +481,7 @@
 			baseConfigurationReference = 66CEB62E328E3E6F268343F2 /* Pods-Rigi_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AVW49Y6CJU;
 				INFOPLIST_FILE = Rigi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -494,6 +497,7 @@
 			baseConfigurationReference = B490F7B5572B97E0396E16B8 /* Pods-Rigi_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AVW49Y6CJU;
 				INFOPLIST_FILE = Rigi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -508,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 948CA567C7E95BAED420A6E7 /* Pods-Rigi_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AVW49Y6CJU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -530,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB9B76656004B55E3513047C /* Pods-Rigi_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AVW49Y6CJU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
