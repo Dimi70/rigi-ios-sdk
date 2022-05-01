@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
 
   s.source_files      = 'Rigi/Classes/*'
   s.resources         = 'Rigi/Assets/*', 'Rigi/Bin/*', 'Rigi/Docs/*'
-  s.preserve_paths    = ['Rigi/**/*', 'Bin/*', , 'Docs/*']
+  s.preserve_paths    = ['Bin/*', , 'Docs/*']
 end
