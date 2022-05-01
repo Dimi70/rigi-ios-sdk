@@ -7,13 +7,11 @@ Pod::Spec.new do |s|
   s.author            = { 'Name' => 'dimitri@rigi.io' }
   s.license           = { :type => 'Copyright', :text => 'Copyright 2022 Rigi.io'}
 
-  #s.source           = { :git => 'file:///Users/dimi/Projects/Xcode/Rigi/Rigi-Source' } # for local compiling
   s.source            = { :git => 'https://github.com/Dimi70/rigi-ios-sdk.git', :tag => s.version.to_s }
   #s.source            = { :git => 'https://github.com/Dimi70/rigi-ios-sdk/1.0.0.zip', :tag => s.version.to_s }
+  #s.source           = { :git => 'file:///Users/dimi/Projects/Xcode/Rigi/Rigi-Source' } # for local compiling
 
-  #s.platform          = :ios, '10.0'
-  s.swift_version     = '5.0'
-  s.ios.deployment_target = '10.0'
+  s.platform          = :ios, '10.0'
   s.frameworks        = 'UIKit'
 
   s.subspec 'Bin' do |bin|
@@ -28,7 +26,6 @@ Pod::Spec.new do |s|
     docs.source_files = 'Docs/**'
   end
 
-#  s.source_files      = 'Rigi/Classes/**'
   s.resources         = 'Rigi/Assets/**'
-  s.preserve_paths    = ['Bin/**', 'Docs/**']
+  #s.preserve_paths    = ['Bin/**', 'Docs/**']
 end
