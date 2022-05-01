@@ -27,5 +27,5 @@ Pod::Spec.new do |s|
   end
 
   s.resources         = 'Rigi/Assets/**'
-  #s.preserve_paths    = ['Bin/**', 'Docs/**']
+  s.preserve_paths    = ['Bin/**', 'Docs/**']
 end
