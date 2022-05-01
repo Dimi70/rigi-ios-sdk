@@ -18,14 +18,16 @@ Pod::Spec.new do |s|
     bin.source_files = 'Bin/**'
   end
 
-  s.subspec 'Classes' do |classes|
-    classes.source_files = 'Rigi/Classes/**'
-  end
-
   s.subspec 'Docs' do |docs|
     docs.source_files = 'Docs/**'
   end
 
-  s.resources         = 'Rigi/Assets/**', 'Bin/**', 'Docs/**'
-  s.preserve_paths    = ['Rigi/**', 'Bin/**', 'Docs/**']
+  s.subspec 'Sources' do |classes|
+    classes.source_files = 'Rigi/Classes/**'
+  end
+
+  s.resources         = 'Rigi/Assets/**'
+
+  #s.resources         = 'Rigi/Assets/**', 'Bin/**', 'Docs/**'
+  #s.preserve_paths    = ['Rigi/**', 'Bin/**', 'Docs/**']
 end
