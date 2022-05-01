@@ -14,20 +14,19 @@ Pod::Spec.new do |s|
   s.platform          = :ios, '10.0'
   s.frameworks        = 'UIKit'
 
-  s.subspec 'Bin' do |bin|
-    bin.source_files = 'Bin/**'
-  end
+#  s.subspec 'Bin' do |bin|
+#    bin.source_files = 'Bin/**'
+#  end
 
-  s.subspec 'Docs' do |docs|
-    docs.source_files = 'Docs/**'
-  end
+#  s.subspec 'Docs' do |docs|
+#    docs.source_files = 'Docs/**'
+#  end
 
-  s.subspec 'Sources' do |classes|
+  s.subspec 'Classes' do |classes|
     classes.source_files = 'Rigi/Classes/**'
   end
 
-  s.resources         = 'Rigi/Assets/**'
-
   #s.resources         = 'Rigi/Assets/**', 'Bin/**', 'Docs/**'
-  #s.preserve_paths    = ['Rigi/**', 'Bin/**', 'Docs/**']
+  s.resources         = 'Rigi/Assets/**'
+  s.preserve_paths    = ['Rigi/**', 'Bin/**', 'Docs/**']
 end
