@@ -3,6 +3,8 @@
 //
 //  Created by Dimitri van Oijen.
 //
+//  Version 1.0.0
+//
 
 import Foundation
 import UIKit
