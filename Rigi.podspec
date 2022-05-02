@@ -15,13 +15,13 @@ Pod::Spec.new do |s|
   s.platform          = :ios, '10.0'
   s.frameworks        = 'UIKit'
 
-#  s.subspec 'Bin' do |bin|
-#    bin.source_files = 'Bin/**'
-#  end
+ s.subspec 'bin' do |bin|
+   bin.source_files = 'bin/**'
+ end
 
-#  s.subspec 'Docs' do |docs|
-#    docs.source_files = 'Docs/**'
-#  end
+ s.subspec 'docs' do |docs|
+   docs.source_files = 'docs/**'
+ end
 
   # Group swift files in Pod source
   s.subspec 'Classes' do |classes|
@@ -32,5 +32,5 @@ Pod::Spec.new do |s|
   s.resources         = 'Rigi/Assets/**'
 
   # Preserve these files in the Pods folder
-  s.preserve_paths    = ['Rigi/**', 'Bin/**', 'Docs/**']
+  s.preserve_paths    = ['Rigi/**', 'bin/**', 'docs/**']
 end
