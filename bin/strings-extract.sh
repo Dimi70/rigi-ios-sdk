@@ -3,20 +3,12 @@ echo "Rigi extract string files"
 echo "-------------------------"
 echo
 
-# Get Rigi skd folder
-DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd)
-
-# Load rigi settings file
-source "$DIR/rigi.ini"
+# Include the Rigi bash library
+source $(dirname $0)/lib-rigi.sh
 
 # Use default download folder if no download folder is specified.
 if [ -z "$DOWNLOAD_FOLDER" ]; then 
   DOWNLOAD_FOLDER=~/Downloads
-fi
-
-# If the Xcode project is not defined, use Rigi sdk parent parent folder.
-if [ -z "$XCODE_PROJECT" ]; then 
-    XCODE_PROJECT=`cd "$DIR/..";pwd`
 fi
 
 # Find the most recent Rigi download in the downloads folder.
@@ -25,7 +17,10 @@ DOWNLOAD_FILE=$(ls -Art "$DOWNLOAD_FOLDER"/"$PROJECT_NAME"_generated*.zip 2> /de
 # No string files found?
 if [ "$DOWNLOAD_FILE" == "" ]; then 
     echo "No Rigi strings file found in download folder:"
-    echo "  $DOWNLOAD_FOLDER"
+    echo "  $DOWNLOAD_FOLDER"/"$PROJECT_NAME""_generated*.zip"
+    echo
+    echo "Did you specify the correct project name (current is '$PROJECT_NAME') in:"
+    echo "  $RIGI/rigi.ini"
     echo
     echo "Rigi extract strings failed 💥"
     echo
@@ -36,9 +31,9 @@ echo "Found most recent Rigi strings file in download folder:"
 echo "  $DOWNLOAD_FILE"
 echo
 
-echo "Do you want to unzip this file in your Xcode project? "
-echo "  $XCODE_PROJECT"
-echo
+# echo "Do you want to unzip this file in your Xcode project? "
+# echo "  $XCODE_PROJECT"
+# echo
 # select yn in "Yes" "No"; do
 #     case $yn in
 #         Yes ) break;;

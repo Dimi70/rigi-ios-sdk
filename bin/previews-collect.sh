@@ -3,11 +3,8 @@ echo "Rigi collect simulator preview"
 echo "------------------------------"
 echo
 
-# Get Rigi skd folder
-DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd)
-
-# Load rigi settings file
-source "$DIR/rigi.ini"
+# Include the Rigi bash library
+source $(dirname $0)/lib-rigi.sh
 
 # If the simulator documents folder is not defined, get the last used simulator / application folder.
 if [ ! -z "$SIMULATOR_DOCUMENTS" ]; then 
@@ -43,10 +40,14 @@ echo "Found $FOUND previews in simulator documents folder:"
 echo "  $BABYLON_SNAPSHOTS"
 echo
 
+# Create the required upload folders
+mkdir -p "$RIGI/data" 1> /dev/null
+mkdir -p "$RIGI/data/upload-previews" 1> /dev/null
+
 # Make output filename (zip)
 DATE=`date "+%Y%m%d-%H%M%S"`
 ZIPNAME="previews-$DATE.zip"
-ZIPFILE="$DIR/data/upload-previews/$ZIPNAME"
+ZIPFILE="$RIGI/data/upload-previews/$ZIPNAME"
 
 # Zip simulator rigi folder and count number of html files in output file (zip)
 pushd "$BABYLON_SNAPSHOTS/.." 1> /dev/null

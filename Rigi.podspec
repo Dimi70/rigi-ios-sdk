@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name              = 'Rigi'
-  s.version           = '1.0.0'
+  s.version           = '1.0.1'
   s.summary           = 'Makes Rigi previews for your iOS project.'
   s.homepage          = 'https://rigi.io'
   s.author            = { 'Name' => 'dimitri@rigi.io' }

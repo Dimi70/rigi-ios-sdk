@@ -1,13 +1,10 @@
 echo "----------------------------"
-echo "Rigi open simulator snaphots"
+echo "Rigi open simulator previews"
 echo "----------------------------"
 echo
 
-# Get Rigi skd folder
-DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd)
-
-# Load rigi settings file
-source "$DIR/rigi.ini"
+# Include the Rigi bash library
+source $(dirname $0)/lib-rigi.sh
 
 # If the simulator documents folder is not defined, get the last used simulator / application folder.
 if [ ! -z "$SIMULATOR_DOCUMENTS" ]; then 

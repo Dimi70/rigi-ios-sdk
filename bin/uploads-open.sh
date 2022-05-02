@@ -3,11 +3,8 @@ echo "Rigi open uploads folder"
 echo "------------------------"
 echo
 
-# Get Rigi skd folder
-DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd)
-
-# Load rigi settings file
-source "$DIR/rigi.ini"
+# Include the Rigi bash library
+source $(dirname $0)/lib-rigi.sh
 
 UPLOADS="$DIR/data/upload-previews/"
 

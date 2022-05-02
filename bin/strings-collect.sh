@@ -3,21 +3,19 @@ echo "Rigi collect string files"
 echo "-------------------------"
 echo
 
-# Get Rigi skd folder
-DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd)
+# Include the Rigi bash library
+source $(dirname $0)/lib-rigi.sh
 
-# Load rigi settings file
-source "$DIR/rigi.ini"
 
-# If the Xcode project is not defined, use Rigi sdk parent parent folder.
-if [ -z "$XCODE_PROJECT" ]; then 
-    XCODE_PROJECT=`cd "$DIR/..";pwd`
-fi
+
+# Create the required upoload folders
+mkdir -p "$RIGI/data" 1> /dev/null
+mkdir -p "$RIGI/data/upload-strings" 1> /dev/null
 
 # Make output filename (zip)
 DATE=`date "+%Y%m%d-%H%M%S"`
 ZIPNAME="strings-$DATE.zip"
-ZIPFILE="$DIR/data/upload-strings/$ZIPNAME"
+ZIPFILE="$RIGI/data/upload-strings/$ZIPNAME"
 
 # Get number of string files in xCode project folder (ignore files inside Pods or SDKs folder)
 LIST=$(find "$XCODE_PROJECT" -name "*.strings" | grep -Ewv "Pods|SDKs")
