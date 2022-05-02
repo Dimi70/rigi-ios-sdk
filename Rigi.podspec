@@ -8,9 +8,10 @@ Pod::Spec.new do |s|
   s.license           = { :type => 'Copyright', :text => 'Copyright 2022 Rigi.io'}
 
   s.source            = { :git => 'https://github.com/Dimi70/rigi-ios-sdk.git', :tag => s.version.to_s }
-  #s.source            = { :git => 'https://github.com/Dimi70/rigi-ios-sdk/1.0.0.zip', :tag => s.version.to_s }
   #s.source           = { :git => 'file:///Users/dimi/Projects/Xcode/Rigi/Rigi-Source' } # for local compiling
+  #s.source            = { :git => 'https://github.com/Dimi70/rigi-ios-sdk/1.0.0.zip', :tag => s.version.to_s } # for compiled framework
 
+  s.swift_versions    = '5.0'
   s.platform          = :ios, '10.0'
   s.frameworks        = 'UIKit'
 
@@ -22,11 +23,14 @@ Pod::Spec.new do |s|
 #    docs.source_files = 'Docs/**'
 #  end
 
+  # Group swift files in Pod source
   s.subspec 'Classes' do |classes|
     classes.source_files = 'Rigi/Classes/**'
   end
 
-  #s.resources         = 'Rigi/Assets/**', 'Bin/**', 'Docs/**'
+  # Add assets to Pod source
   s.resources         = 'Rigi/Assets/**'
+
+  # Preserve these files in the Pods folder
   s.preserve_paths    = ['Rigi/**', 'Bin/**', 'Docs/**']
 end

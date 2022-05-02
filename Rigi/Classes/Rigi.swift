@@ -249,31 +249,30 @@ public class Rigi {
 
         // TODO: This should be nicely integrated with the makeSnapshot() functionality
 
-        var window = appWindow
-        var upperViewController: UIViewController?
-        var upperViewControllerPassed = true
-
-        // Find upper view controller
-        if settings.onlyScanUpperViewController {
-
-            upperViewControllerPassed = false
-            appWindow?.traverseHierarchy { responder, level in
-                if let viewController = responder as? UIViewController {
-
-                    let viewControllerName = String(describing: type(of: viewController))
-
-                    // Embedded view controllers should not be the new upper view controller. Unless explicity registered as upper view controller..
-                    if !viewController.isEmbedded || settings.additionalUpperViewControllers.contains(viewControllerName) {
-                        upperViewController = viewController
-                    }
-                }
-            }
-        }
-
-        if upperViewController != nil && upperViewController != autoScanViewController {
-            autoScanViewController = upperViewController
-            return true
-        }
+//        var upperViewController: UIViewController?
+//        var upperViewControllerPassed = true
+//
+//        // Find upper view controller
+//        if settings.onlyScanUpperViewController {
+//
+//            upperViewControllerPassed = false
+//            appWindow?.traverseHierarchy { responder, level in
+//                if let viewController = responder as? UIViewController {
+//
+//                    let viewControllerName = String(describing: type(of: viewController))
+//
+//                    // Embedded view controllers should not be the new upper view controller. Unless explicity registered as upper view controller..
+//                    if !viewController.isEmbedded || settings.additionalUpperViewControllers.contains(viewControllerName) {
+//                        upperViewController = viewController
+//                    }
+//                }
+//            }
+//        }
+//
+//        if upperViewController != nil && upperViewController != autoScanViewController {
+//            autoScanViewController = upperViewController
+//            return true
+//        }
         return false
     }
 
